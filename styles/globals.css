@@ -1,0 +1,59 @@
+html,
+body {
+  background: #cccccc !important;
+  padding-top: 1em;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none !important;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+My Additions
+*/
+
+.portfolio-post-titles {
+  text-align: center;
+  color: #01050e;
+}
+
+.portfolio-post-titles:hover {
+  color: var(--bs-primary) !important;
+}
+
+.portfolio-footer {
+  height: 100%;
+  margin-top: 6em;
+}
+
+.main-container {
+  padding-top: 70px;
+}
+.entries .main-image img {
+  width: 100%;
+  display: block;
+}
+
+.footer-title {
+  text-decoration: underline;
+  font-size: 2em;
+  text-align: center;
+  margin-right: auto;
+}
+
+.footer-link {
+  text-align: center;
+  color: #212529 !important;
+}
+
+.footer-link:hover {
+  color: #daebff !important;
+}

@@ -13,13 +13,13 @@ export default function Home({ portfolioItems }) {
                 <meta property={"og:description"} content={"Bob's first Next.js App. Using a strapi backend."} key={"description"}/>
                 <link rel="icon" href={"/myfav.ico"} />
             </Head>
-            <div className="entries">
-                <div className="row justify-content-start ">
+            <div key={"top-div"} className="entries">
+                <div key={"top-div-2"} className="row justify-content-start ">
                     {portfolioItems.map((portfolio) => (
-                        <div className="col-md-6">
-                            <div className="entry mb-3">
+                        <div key={"top-div-3"} className="col-md-6">
+                            <div key={"top-div-4"} className="entry mb-3">
                                 <Link as={"/portfolio/" + portfolio.slug} href="/portfolio/[id]">
-                                    <div className="main-image">
+                                    <div key={"top-div-5"} className="main-image">
                                         <Image
                                             src={"http://localhost:1337" + portfolio.image.url}
                                             width={600}

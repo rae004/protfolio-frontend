@@ -2,10 +2,17 @@ import Layout from '../components/Layout';
 import fetchFromCMS from '../lib/service';
 import Image from 'next/image'
 import Link from 'next/link';
+import Head from "next/head";
 
 export default function Home({ portfolioItems }) {
     return (
         <Layout>
+            <Head>
+                <title>Portfolio</title>
+                <meta property={"og:title"} content={"Portfolio"} key={"title"}/>
+                <meta property={"og:description"} content={"Bob's first Next.js App. Using a strapi backend."} key={"description"}/>
+                <link rel="icon" href={"/myfav.ico"} />
+            </Head>
             <div className="entries">
                 <div className="row justify-content-start ">
                     {portfolioItems.map((portfolio) => (

@@ -1,11 +1,18 @@
 import Image from 'next/image';
 import Layout from '../../components/Layout';
 import fetchFromCMS from '../../lib/service';
+import Head from "next/head";
 
 const PortfolioItem = ({ portfolio }) => {
 
     return (
         <Layout>
+            <Head>
+                <title>{portfolio.Headline}</title>
+                <meta property={"og:title"} content={"App Title"} key={"title"}/>
+                <meta property={"og:description"} content={"Bob's first Next.js App. Using a strapi backend."} key={"description"}/>
+                <link rel="icon" href={"/myfav.ico"} />
+            </Head>
             <div className="row">
                 <div className="portfolio-image text-center mb-4">
                     <div className="col-md-12">

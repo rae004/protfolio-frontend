@@ -1,7 +1,6 @@
 html,
 body {
   background: #cccccc !important;
-  padding-top: 1em;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -20,6 +19,16 @@ a {
 My Additions
 */
 
+@media screen and (min-width: 992px) {
+  .MuiButtonBase-root {
+    display: none !important;
+  }
+}
+
+.main-container {
+  padding-top: 5rem;
+}
+
 .portfolio-post-titles {
   text-align: center;
   color: #01050e;
@@ -34,9 +43,6 @@ My Additions
   margin-top: 6em;
 }
 
-.main-container {
-  padding-top: 70px;
-}
 .entries .main-image img {
   width: 100%;
   display: block;

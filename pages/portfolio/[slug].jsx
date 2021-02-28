@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Layout from '../../components/Layout';
 import fetchFromCMS from '../../lib/service';
 import Head from "next/head";
+import DateFormat from "../../components/shared/format-datetime-string";
 
 const PortfolioItem = ({ portfolio }) => {
 
@@ -29,6 +30,9 @@ const PortfolioItem = ({ portfolio }) => {
                     <div className="col-md-12">
                         <div className="portfolio-headline text-center m-2">
                             <h1>{portfolio.Headline}</h1>
+                            <small>
+                                <DateFormat dateString={portfolio.post_date}/>
+                            </small>
                         </div>
                         <div dangerouslySetInnerHTML={{ __html: portfolio.content }}/>
                     </div>

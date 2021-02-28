@@ -1,4 +1,9 @@
-import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
+import {MDBCol, MDBContainer, MDBFooter, MDBRow} from "mdbreact";
+import DateFormat from "./format-datetime-string";
+
+const getCurrentYear = () => {
+    return JSON.stringify(new Date().getFullYear());
+};
 
 const Footer = () => (
     <footer className="footer portfolio-footer bg-primary align-content-end">
@@ -27,7 +32,7 @@ const Footer = () => (
                     <div className="footer-copyright text-center py-3">
                         <hr />
                         <MDBContainer fluid>
-                            &copy; {new Date().getFullYear()} Copyright: <a className="footer-link" href="https://rae=dev.com"> rae-dev.com </a>
+                            <small>&copy;<DateFormat dateString={getCurrentYear()} dateFormat={'yyyy'} />Copyright: <a className="footer-link" href="/"> rae-dev.com </a></small>
                         </MDBContainer>
                     </div>
                 </MDBFooter>

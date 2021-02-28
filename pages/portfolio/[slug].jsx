@@ -10,8 +10,8 @@ const PortfolioItem = ({ portfolio }) => {
         <Layout>
             <Head>
                 <title>{portfolio.Headline}</title>
-                <meta property={"og:title"} content={"App Title"} key={"title"}/>
-                <meta property={"og:description"} content={"Bob's first Next.js App. Using a strapi backend."} key={"description"}/>
+                <meta property={"og:title"} content={portfolio.Headline} key={"title"}/>
+                <meta property={"og:description"} content={portfolio.seo_description} key={"description"}/>
                 <link rel="icon" href={"/myfav.ico"} />
             </Head>
             <div className="row">

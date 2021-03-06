@@ -6,14 +6,14 @@ const getCurrentYear = () => {
 };
 
 const Footer = () => (
-    <footer className="footer portfolio-footer bg-primary align-content-end">
+    <footer className="footer portfolio-footer rae-nav-bar align-content-end">
         <div className="container">
                 <MDBFooter color="blue" className="font-small pt-4 mt-4">
                     <MDBContainer fluid className="text-center text-md-left">
                         <MDBRow>
                             <MDBCol md="6">
                                 <div className="footer-title me-auto mb-2 mb-lg-0">Footer Content</div>
-                                <p>
+                                <p className={"footer-content"}>
                                     Here Is a place to learn and explore. Reach out, share your thoughts about what you found. Always good to get feedback!
                                 </p>
                             </MDBCol>

@@ -1,6 +1,7 @@
 html,
 body {
-  background: #cccccc !important;
+  background: #212121 !important;
+  color: rgba(255,255,255,.55) !important;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -31,7 +32,7 @@ My Additions
 
 .portfolio-post-titles {
   text-align: center;
-  color: #01050e;
+  color: rgba(255,255,255,.55) !important;
 }
 
 .portfolio-post-titles:hover {
@@ -48,6 +49,10 @@ My Additions
   display: block;
 }
 
+.rae-nav-bar {
+  background-color: #000000;
+}
+
 .footer-title {
   text-decoration: underline;
   font-size: 2em;
@@ -57,9 +62,13 @@ My Additions
 
 .footer-link {
   text-align: center;
-  color: #212529 !important;
+  color: rgba(255,255,255,.55) !important;
+}
+
+.footer-content {
+  color: rgba(255,255,255,.55) !important;
 }
 
 .footer-link:hover {
-  color: #daebff !important;
+  color: #bfbfbf !important;
 }

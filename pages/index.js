@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Link from 'next/link';
 import Head from "next/head";
 
+//todo create actual home page, move this layout to a new page called /portfolios
+//todo We will have "/" with about purpose and "/portfolios" list collection type portfolio content.
 export default function Home({ portfolioItems }) {
     return (
         <Layout>

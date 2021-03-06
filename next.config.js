@@ -1,6 +1,5 @@
 module.exports = {
     images: {
-        domains: ['localhost'],
-        imgSrc: 'http://localhost:1337/uploads/'
+        domains: ['portfolio-strapi-cdn.s3.us-east-2.amazonaws.com'],
     },
 };

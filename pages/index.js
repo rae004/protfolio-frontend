@@ -21,7 +21,7 @@ export default function Home({ portfolioItems }) {
                                 <Link as={"/portfolio/" + portfolio.slug} href="/portfolio/[id]">
                                     <div key={"top-div-5"} className="main-image">
                                         <Image
-                                            src={"http://localhost:1337" + portfolio.image.url}
+                                            src={portfolio.image.url}
                                             width={600}
                                             height={400}
                                             alt={portfolio.Headline}

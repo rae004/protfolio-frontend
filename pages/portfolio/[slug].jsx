@@ -18,7 +18,7 @@ const PortfolioItem = ({ portfolio }) => {
                 <div className="portfolio-image text-center mb-4">
                     <div className="col-md-12">
                         <Image
-                            src={"http://localhost:1337" + portfolio.image.url}
+                            src={portfolio.image.url}
                             width={1000}
                             height={500}
                         />

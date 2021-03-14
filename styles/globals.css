@@ -32,9 +32,12 @@ My Additions
 
 .portfolio-post-titles {
   text-align: center;
-  color: rgba(255,255,255,.55) !important;
 }
 
+
+.MuiPaper-rounded {
+ padding: 16px;
+}
 .portfolio-post-titles:hover {
   color: var(--bs-primary) !important;
 }

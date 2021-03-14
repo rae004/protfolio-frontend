@@ -3,6 +3,7 @@ import fetchFromCMS from '../lib/service';
 import Image from 'next/image'
 import Link from 'next/link';
 import Head from "next/head";
+import { Grid, Paper} from '@material-ui/core';
 
 //todo create actual home page, move this layout to a new page called /portfolios
 //todo We will have "/" with about purpose and "/portfolios" list collection type portfolio content.
@@ -15,28 +16,24 @@ export default function Home({ portfolioItems }) {
                 <meta property={"og:description"} content={"Bob's first Next.js App. Using a strapi backend."} key={"description"}/>
                 <link rel="icon" href={"/myfav.ico"} />
             </Head>
-            <div key={"top-div"} className="entries">
-                <div key={"top-div-2"} className="row justify-content-start ">
+            <div key={"portfolio-root-div"} className={""}>
+                <Grid key={"portfolio-main-grid"} container spacing={3}>
                     {portfolioItems.map((portfolio) => (
-                        <div key={"top-div-3"} className="col-md-6">
-                            <div key={"top-div-4"} className="entry mb-3">
-                                <Link as={"/portfolio/" + portfolio.slug} href="/portfolio/[id]">
-                                    <div key={"top-div-5"} className="main-image">
-                                        <Image
-                                            src={portfolio.image.url}
-                                            width={600}
-                                            height={400}
-                                            alt={portfolio.Headline}
-                                        />
-                                        <a className={'portfolio-post-titles'} href={"/portfolio/" + portfolio.slug}>
-                                            <h1>{portfolio.Headline}</h1>
-                                        </a>
-                                    </div>
-                                </Link>
-                            </div>
-                        </div>
+                        <Grid key={portfolio.id} item lg={4}>
+                            <Paper>
+                                <Image
+                                    src={portfolio.image.url}
+                                    width={600}
+                                    height={400}
+                                    alt={portfolio.Headline}
+                                />
+                                <a className={'portfolio-post-titles'} href={"/portfolio/" + portfolio.slug}>
+                                    <h1>{portfolio.Headline}</h1>
+                                </a>
+                            </Paper>
+                        </Grid>
                     ))}
-                </div>
+                </Grid>
             </div>
         </Layout>
     );

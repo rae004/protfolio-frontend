@@ -15,9 +15,10 @@ export default function SimpleMenu() {
         setAnchorEl(null);
     };
 
+    //todo add styles for darker colored menu. see global css nav and footer entries
     return (
         <div>
-            <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
+            <Button aria-label="open-mobile-nav" aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
                 <span className="navbar-toggler-icon" />
             </Button>
             <Menu

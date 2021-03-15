@@ -3,6 +3,7 @@ import Layout from '../../components/Layout';
 import fetchFromCMS from '../../lib/service';
 import Head from "next/head";
 import DateFormat from "../../components/shared/format-datetime-string";
+import { Grid } from "@material-ui/core";
 
 const PortfolioItem = ({ portfolio }) => {
 
@@ -14,30 +15,29 @@ const PortfolioItem = ({ portfolio }) => {
                 <meta property={"og:description"} content={portfolio.seo_description} key={"description"}/>
                 <link rel="icon" href={"/myfav.ico"} />
             </Head>
-            <div className="row">
-                <div className="portfolio-image text-center mb-4">
-                    <div className="col-md-12">
-                        <Image
-                            src={portfolio.image.url}
-                            width={1000}
-                            height={500}
-                        />
-                    </div>
-                </div>
-            </div>
-            <div className="row">
-                <div className="portfolio-content">
-                    <div className="col-md-12">
-                        <div className="portfolio-headline text-center m-2">
-                            <h1>{portfolio.Headline}</h1>
-                            <small>
-                                <DateFormat dateString={portfolio.post_date}/>
-                            </small>
-                        </div>
-                        <div dangerouslySetInnerHTML={{ __html: portfolio.content }}/>
-                    </div>
-                </div>
-            </div>
+            <Grid container xs={12} className="text-center">
+                <Grid item xs={12}>
+                    <Image
+                        src={portfolio.image.url}
+                        width={1000}
+                        height={500}
+                        priority={true}
+                        quality={100}
+                        alt={portfolio.Headline}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <h1>{portfolio.Headline}</h1>
+                </Grid>
+                <Grid item xs={12}>
+                    <small>
+                        <DateFormat dateString={portfolio.post_date}/>
+                    </small>
+                </Grid>
+                <Grid item xs={12} className={'text-left'}>
+                    <div dangerouslySetInnerHTML={{ __html: portfolio.content }}/>
+                </Grid>
+            </Grid>
         </Layout>
     );
 };

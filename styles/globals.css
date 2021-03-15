@@ -38,6 +38,11 @@ My Additions
 .MuiPaper-rounded {
  padding: 16px;
 }
+
+.text-left > div > div {
+  text-align: left;
+}
+
 .portfolio-post-titles:hover {
   color: var(--bs-primary) !important;
 }

@@ -22,7 +22,7 @@ const PortfolioItem = ({ portfolio }) => {
                         width={1000}
                         height={500}
                         priority={true}
-                        quality={100}
+                        quality={50}
                         alt={portfolio.Headline}
                     />
                 </Grid>
